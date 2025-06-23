@@ -1,13 +1,19 @@
-import { motion } from "framer-motion";
-import { Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
+import Home from "./components/Home";
 
 function App() {
   return (
-   <div className=" text-white min-h-screen">
-      <Navbar />
-    </div>
+    <HashRouter>
+      <div className="text-white min-h-screen">
+        <Navbar />
+        <div className="p-6">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
+      </div>
+    </HashRouter>
   );
 }
 
