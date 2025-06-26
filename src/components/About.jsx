@@ -28,7 +28,8 @@ export default function About() {
         className="text-center md:text-lg mt-6 max-w-2xl w-full mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 4 }}
+        transition={{ duration: 4, 
+        }}
       >
         Beyond the classroom, I actively explore various tech domains including web development and open-source contributions. I’m driven by a desire to keep learning, experimenting, and growing as a developer. Whether it's developing interactive web apps or diving into new tools and frameworks, I’m always excited to expand my skill set and contribute to meaningful tech projects.
       </motion.p>
