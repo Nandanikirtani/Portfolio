@@ -5,4 +5,22 @@ body {
   @apply bg-[#1D1919] text-white;
   font-family: 'Poppins', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
 

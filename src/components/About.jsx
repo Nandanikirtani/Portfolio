@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="h-screen flex flex-col items-center justify-center md:mt-16 mt-6">
+    <section id="about" className="min-h-screen flex flex-col items-center justify-center">
       <motion.h1
         className="md:text-6xl text-4xl h-16 font-bold text-center"
         initial={{ opacity: 0, y: 200 }}
