@@ -2,17 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import home from "../assets/home.gif";
 export default function Home() {
-  
   return (
-    <div id ="home" className="pt-16 "> 
+    <div id="home" className="pt-16 ">
       <div className="h-full place-content-center flex flex-col md:flex-row ">
-        <div className=" md:w-2xl md:text-left text-center p-8 justify-center">
+        <div className=" md:text-left text-center p-8 justify-center">
           <h1 className="md:text-4xl md:mt-5 text-2xl">Hello I'm</h1>
-          <h1 className="md:text-6xl text-4xl font-bold text-[#00FFE6]">
+          <h1 className="md:text-6xl text-4xl font-bold text-[#00FFE6]  whitespace-nowrap">
             Nandani Kirtani
           </h1>
           <motion.h1
-            className="text-red-500 md:text-lg mt-2"
+            className="text-red-500 md:text-lg mt-2  whitespace-nowrap"
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -20,7 +19,7 @@ export default function Home() {
             EAT() - Sleep() - Code() - Repeat()
           </motion.h1>
           <motion.h1
-            className="mt-10 text-3xl "
+            className="mt-10 text-3xl  whitespace-nowrap"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 3, ease: "easeInOut" }}
@@ -33,37 +32,32 @@ export default function Home() {
             design with strong logic. Focused on usability, performance, and
             scalability from front to back.
           </h3>
-          <div className="md:mt-12 mt-6">
+
+          <div className="flex flex-col md:flex-row items-center gap-4 md:mt-12 mt-6">
             <motion.a
-            href="https://github.com/Nandanikirtani"
-            target="_blank"
-              initial={{ y: -300}}
-              animate={{
-                y: [-300, 0, -30, 0, -10, 0], 
-                opacity: 1,
-              }}
+              href="https://github.com/Nandanikirtani"
+              target="_blank"
+              initial={{ y: -300 }}
+              animate={{ y: [-300, 0, -30, 0, -10, 0], opacity: 1 }}
               transition={{
                 duration: 1,
                 ease: "easeOut",
-                times: [0, 0.3, 0.5, 0.7, 0.85, 1], 
+                times: [0, 0.3, 0.5, 0.7, 0.85, 1],
               }}
-              className="bg-red-500 ml-3 py-3 px-8 mr-5 rounded-lg"
+              className="bg-red-500 py-3 px-8 rounded-lg text-white text-center w-full md:w-auto"
             >
               View Work
             </motion.a>
             <motion.a
-            href="#contact"
+              href="#contact"
               initial={{ y: -300 }}
-              animate={{
-                y: [-300, 0, -30, 0, -10, 0], 
-                opacity: 1,
-              }}
+              animate={{ y: [-300, 0, -30, 0, -10, 0], opacity: 1 }}
               transition={{
                 duration: 1.4,
                 ease: "easeOut",
-                times: [0, 0.3, 0.5, 0.7, 0.85, 1], 
+                times: [0, 0.3, 0.5, 0.7, 0.85, 1],
               }}
-              className="border border-red-500 py-3 px-8 rounded-lg"
+              className="border border-red-500 py-3 px-8 rounded-lg text-center w-full md:w-auto"
             >
               Contact Me
             </motion.a>

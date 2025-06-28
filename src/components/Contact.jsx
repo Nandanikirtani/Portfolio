@@ -19,7 +19,7 @@ export default function Contact() {
         Contact
       </motion.h1>
 
-      <div className="h-full place-content-center mt-4 mb-4 flex flex-col md:flex-row gap-8">
+      <div className="h-full place-content-center mt-4 mb-4 flex flex-col mx-auto md:flex-row gap-8">
         {/* Left Section */}
         <div className="order-2 md:order-1 md:w-2xl md:text-left text-center p-8 justify-center">
           <h1 className="text-[#00FFE6] text-4xl">Have a project?</h1>
@@ -27,27 +27,27 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
             {/* Contact Info */}
-            <div>
+            <div className="mx-auto">
               <h3 className="text-lg font-semibold mb-2">Contact</h3>
-              <div className="flex items-center gap-2 text-sm mb-2">
+              <div className="flex items-center gap-2 text-sm mb-2 ">
                 <MdEmail className="text-xl" />
                 <a
                   href="mailto:nandanikirtani99@gmail.com"
-                  className="hover:underline"
+                  className="hover:underline truncate w-[200px] sm:w-[250px]"
                 >
                   nandanikirtani99@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <MdPhone className="text-xl" />
-                <a href="tel:+919818990772" className="hover:underline">
+                <a href="tel:+919818990772" className="hover:underline truncate w-[200px] sm:w-[250px]">
                   +91 9818990772
                 </a>
               </div>
             </div>
 
             {/* Important Links */}
-            <div>
+            <div className="mx-auto">
               <h3 className="text-lg font-semibold mb-2">Important Links</h3>
               <div className="flex items-center gap-2 text-sm mb-2 ">
                 <FaGithub className="text-xl" />
@@ -55,7 +55,7 @@ export default function Contact() {
                   href="https://github.com/Nandanikirtani"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="hover:underline truncate w-[200px] sm:w-[250px]"
                 >
                   github.com/Nandanikirtani
                 </a>
@@ -66,7 +66,7 @@ export default function Contact() {
                   href="https://linkedin.com/in/nandanikirtani"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="hover:underline truncate w-[200px] sm:w-[250px]"
                 >
                   https://www.linkedin.com/in/nandani-kirtani/
                 </a>
@@ -77,9 +77,9 @@ export default function Contact() {
 
         {/* Right Section */}
         <div className="order-1 md:order-2 md:w-lg flex flex-col gap-6">
-          <h1 className="text-3xl font-semibold">Let's work together</h1>
+          <h1 className="text-3xl font-semibold mx-auto">Let's work together</h1>
 
-          <form className="shadow-lg shadow-amber-50 p-6 rounded-lg space-y-4 w-full max-w-md">
+          <form className="shadow-lg shadow-amber-50 p-6 rounded-lg space-y-4 w-full max-w-md mx-auto">
             <div className="flex flex-col">
               <label htmlFor="name" className="text-sm font-medium mb-1">
                 Name
