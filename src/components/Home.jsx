@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import home from "../assets/home.gif";
 export default function Home() {
   
   return (
@@ -71,7 +72,7 @@ export default function Home() {
         <div className=" md:w-lg md:mt-16 ">
           <img
             className="md:w-xl w-sm rounded-lg mx-auto mb-6"
-            src="/home.gif"
+            src={home}
             alt=""
           />
         </div>

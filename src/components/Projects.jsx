@@ -1,6 +1,8 @@
 import { useState } from "react";
 import React from "react";
 import { motion } from "framer-motion";
+import jetset from "../assets/jetset.png";
+import wallify from "../assets/wallify.png";
 
 export default function Projects() {
   const [flipped, setFlipped] = useState(false);
@@ -10,7 +12,7 @@ export default function Projects() {
   const project = [
     {
       name: "Wallify",
-      image: "/wallify.png",
+      image: wallify,
       desc: "Finance Manager is an all-in-one personal finance app designed to help users track expenses, manage budgets, calculate SIPs/EMIs, and monitor investment portfolios. Built for financial empowerment, it offers intuitive tools and insights to support smarter money decisions, especially for women.",
       tech: ["React.js", "Bootstrap"],
       github: "https://github.com/Nandanikirtani/Wallify",
@@ -18,7 +20,7 @@ export default function Projects() {
     },
     {
       name: "Jet Set Journey",
-      image: "/jetset.png",
+      image: jetset,
       desc: "Jet Set Journey is a sleek and user-friendly travel web app that helps users explore destinations, plan trips, and discover curated travel experiences. With interactive maps, destination highlights, and smart itinerary features, it transforms how users dream, plan, and embark on their next adventure",
       tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Jashank06/Travelling-Project",
