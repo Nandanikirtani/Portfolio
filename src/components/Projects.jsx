@@ -61,7 +61,15 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-end gap-4 mt-auto px-4 pb-4">
+              </div>
+
+              {/* Back Side */}
+              <motion.div className="absolute w-full h-full bg-gray-900 text-white rounded-lg shadow-xl rotate-y-180 backface-hidden p-4 flex flex-col" >
+                <h3 className="text-center font-bold text-lg mb-1">Overview</h3>
+                <p className="text-sm overflow-y-auto flex-grow leading-snug m-0 p-0">
+                  {p.desc}
+                </p>
+                  <div className="flex justify-end gap-4 mt-auto px-4 pb-4">
                   <a
                     href={p.github}
                     target="_blank"
@@ -81,14 +89,6 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
-              </div>
-
-              {/* Back Side */}
-              <motion.div className="absolute w-full h-full bg-gray-900 text-white rounded-lg shadow-xl rotate-y-180 backface-hidden p-4 flex flex-col" >
-                <h3 className="text-center font-bold text-lg mb-1">Overview</h3>
-                <p className="text-sm overflow-y-auto flex-grow leading-snug m-0 p-0">
-                  {p.desc}
-                </p>
               </motion.div>
             </div>
           </div>

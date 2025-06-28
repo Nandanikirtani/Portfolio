@@ -33,7 +33,9 @@ export default function Home() {
             scalability from front to back.
           </h3>
           <div className="md:mt-12 mt-6">
-            <motion.button
+            <motion.a
+            href="https://github.com/Nandanikirtani"
+            target="_blank"
               initial={{ y: -300}}
               animate={{
                 y: [-300, 0, -30, 0, -10, 0], 
@@ -44,13 +46,12 @@ export default function Home() {
                 ease: "easeOut",
                 times: [0, 0.3, 0.5, 0.7, 0.85, 1], 
               }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-red-500 ml-3 py-2 px-8 mr-5 rounded-lg"
+              className="bg-red-500 ml-3 py-3 px-8 mr-5 rounded-lg"
             >
               View Work
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
+            href="#contact"
               initial={{ y: -300 }}
               animate={{
                 y: [-300, 0, -30, 0, -10, 0], 
@@ -61,12 +62,10 @@ export default function Home() {
                 ease: "easeOut",
                 times: [0, 0.3, 0.5, 0.7, 0.85, 1], 
               }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="border border-red-500 py-2 px-8 rounded-lg"
+              className="border border-red-500 py-3 px-8 rounded-lg"
             >
               Contact Me
-            </motion.button>
+            </motion.a>
           </div>
         </div>
         <div className=" md:w-lg md:mt-16 ">
