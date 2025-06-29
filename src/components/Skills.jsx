@@ -1,7 +1,9 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function Skills() {
+
   const skillIcons = [
     {
       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGGT_pnMHJdps9fGjcDaFSqcfFxO2E7BQk4g&s",
@@ -77,7 +79,7 @@ export default function Skills() {
       <div className="flex flex-wrap mx-auto md:w-full ">
         <div className="flex flex-col order-2 md:order-1 gap-2 mt-4 md:mt-0 mx-auto">
           <motion.div
-            className="shadow-xl p-4 w-full max-w-xs md:w-80 my-auto mt-4"
+            className="shadow-xl p-4 w-full max-w-xs md:w-100 my-auto mt-4"
             style={{ boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)" }}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -92,7 +94,7 @@ export default function Skills() {
             </ul>
           </motion.div>
           <motion.div
-            className="shadow-xl p-4 w-full max-w-xs md:w-80 my-auto mt-4"
+            className="shadow-xl p-4 w-full max-w-xs md:w-100 my-auto mt-4"
             style={{ boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)" }}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -140,11 +142,12 @@ export default function Skills() {
           {/* Circle + SVG */}
           <div className="relative flex justify-center items-center mt-10 h-[300px] w-full">
             {/* SVG - Behind the circle */}
-            <div className="absolute  z-0">
+            <div className="absolute z-0 w-[300px] h-[280px]">
               <svg
                 // viewBox="0 0 418 282"
-                width="100%"
-                height="auto"
+                // width="100%"
+                // height="auto"
+                className="w-full h-full"
                 viewBox="0 0 418 282"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -158,18 +161,11 @@ export default function Skills() {
                   "M205.5 280L343 1",
                   "M205.5 280L416.5 1",
                 ].map((d, i) => (
-                  <motion.path
+                  <path
                     key={i}
                     d={d}
                     stroke="white"
                     strokeWidth="2"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{
-                      duration: 2,
-                      ease: "easeInOut",
-                      delay: i * 0.2,
-                    }}
                   />
                 ))}
               </svg>
@@ -177,7 +173,7 @@ export default function Skills() {
 
             {/* Circle - on top of SVG */}
             <motion.div
-              className="h-16 w-16 translate-y-30 rounded-full bg-[#00FFE6] flex items-center justify-center text-black font-bold text-xl z-10"
+              className="h-16 w-16 translate-y-30 rounded-full bg-[#00FFE6] flex items-center justify-center text-black font-bold text-xl z-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
@@ -188,7 +184,7 @@ export default function Skills() {
         </div>
         <div className="flex flex-col order-3 md:order-3 items-start gap-2 mx-auto">
           <motion.div
-            className="shadow-xl p-4 w-full max-w-xs md:w-80 my-auto mt-4"
+            className="shadow-xl p-4 w-full max-w-xs md:w-100  my-auto mt-4"
             style={{ boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)" }}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -204,7 +200,7 @@ export default function Skills() {
             </ul>
           </motion.div>
           <motion.div
-            className="shadow-xl p-4 w-full max-w-xs md:w-80 my-auto mt-4"
+            className="shadow-xl p-4 w-full max-w-xs md:w-100 my-auto mt-4"
             style={{ boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)" }}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -220,7 +216,7 @@ export default function Skills() {
             </ul>
           </motion.div>
           <motion.div
-            className="shadow-xl p-4 w-full max-w-xs md:w-80 my-auto mt-4"
+            className="shadow-xl p-4 w-full max-w-xs md:w-100 my-auto mt-4"
             style={{ boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)" }}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
