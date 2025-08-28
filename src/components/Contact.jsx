@@ -7,123 +7,87 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center md:mt-0 mt-20"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-gradient-to-b  text-white"
     >
+      {/* Heading */}
       <motion.h1
-        className="md:text-6xl text-4xl font-bold text-center mb-10 z-20"
-        initial={{ opacity: 0, y: 200 }}
+        className="text-5xl md:text-6xl font-bold text-center mb-12"
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        Contact
+        Get in Touch
       </motion.h1>
 
-      <div className="h-full place-content-center mt-4 mb-4 flex flex-col mx-auto md:flex-row gap-8">
-        {/* Left Section */}
-        <div className="order-2 md:order-1 md:w-2xl md:text-left text-center p-8 justify-center">
-          <h1 className="text-[#00FFE6] text-4xl">Have a project?</h1>
-          <h1 className="text-3xl mt-6">Get in touch</h1>
+      {/* Contact Container */}
+      <div className="grid md:grid-cols-2 gap-10 max-w-5xl w-full">
+        {/* Left Card - Contact Info */}
+        <motion.div
+          className="bg-gray-800/70 rounded-2xl shadow-lg p-8 flex flex-col justify-center"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-[#00FFE6] text-3xl font-semibold mb-4">Have a Project?</h2>
+          <p className="text-lg text-gray-300 mb-8">Let’s collaborate and bring your ideas to life.</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            {/* Contact Info */}
-            <div className="mx-auto">
-              <h3 className="text-lg font-semibold mb-2">Contact</h3>
-              <div className="flex items-center gap-2 text-sm mb-2 ">
-                <MdEmail className="text-xl" />
-                <a
-                  href="mailto:nandanikirtani99@gmail.com"
-                  className="hover:underline truncate w-[200px] sm:w-[250px]"
-                >
-                  nandanikirtani99@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <MdPhone className="text-xl" />
-                <a href="tel:+919818990772" className="hover:underline truncate w-[200px] sm:w-[250px]">
-                  +91 9818990772
-                </a>
-              </div>
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <MdEmail className="text-2xl text-[#00FFE6]" />
+              <a
+                href="mailto:nandanikirtani99@gmail.com"
+                className="hover:underline"
+              >
+                nandanikirtani99@gmail.com
+              </a>
             </div>
-
-            {/* Important Links */}
-            <div className="mx-auto">
-              <h3 className="text-lg font-semibold mb-2">Important Links</h3>
-              <div className="flex items-center gap-2 text-sm mb-2 ">
-                <FaGithub className="text-xl" />
-                <a
-                  href="https://github.com/Nandanikirtani"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline truncate w-[200px] sm:w-[250px]"
-                >
-                  github.com/Nandanikirtani
-                </a>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <FaLinkedin className="text-xl" />
-                <a
-                  href="https://linkedin.com/in/nandanikirtani"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline truncate w-[200px] sm:w-[250px]"
-                >
-                  https://www.linkedin.com/in/nandani-kirtani/
-                </a>
-              </div>
+            <div className="flex items-center gap-3">
+              <MdPhone className="text-2xl text-[#00FFE6]" />
+              <a href="tel:+919818990772" className="hover:underline">
+                +91 9818990772
+              </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Section */}
-        <div className="order-1 md:order-2 md:w-lg flex flex-col gap-6">
-          <h1 className="text-3xl font-semibold mx-auto">Let's work together</h1>
+        {/* Right Card - Links */}
+        <motion.div
+          className="bg-gray-800/70 rounded-2xl shadow-lg p-8 flex flex-col justify-center"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-[#00FFE6] text-3xl font-semibold mb-4">Connect with Me</h2>
+          <p className="text-lg text-gray-300 mb-8">Follow my work and connect on professional platforms.</p>
 
-          <form className="shadow-lg shadow-amber-50 p-6 rounded-lg space-y-4 w-full max-w-md mx-auto">
-            <div className="flex flex-col">
-              <label htmlFor="name" className="text-sm font-medium mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                className="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFE6]"
-              />
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <FaGithub className="text-2xl text-[#00FFE6]" />
+              <a
+                href="https://github.com/Nandanikirtani"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                github.com/Nandanikirtani
+              </a>
             </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="email" className="text-sm font-medium mb-1">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="you@example.com"
-                className="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFE6]"
-              />
+            <div className="flex items-center gap-3">
+              <FaLinkedin className="text-2xl text-[#00FFE6]" />
+              <a
+                href="https://www.linkedin.com/in/nandani-kirtani/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                linkedin.com/in/nandani-kirtani
+              </a>
             </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="message" className="text-sm font-medium mb-1">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows="4"
-                placeholder="Type your message here..."
-                className="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00FFE6]"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="border border-[#00FFE6] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[#00FFE6] hover:text-black transition"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

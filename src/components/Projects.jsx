@@ -1,20 +1,15 @@
-import { useState } from "react";
-import React from "react";
 import { motion } from "framer-motion";
 import jetset from "../assets/jetset.png";
 import wallify from "../assets/wallify.png";
+import edutainment from "../assets/edutainment.png";
 
 export default function Projects() {
-  const [flipped, setFlipped] = useState(false);
-  function flip() {
-    setFlipped((prev) => !prev);
-  }
   const project = [
     {
       name: "Wallify",
       image: wallify,
       desc: "Finance Manager is an all-in-one personal finance app designed to help users track expenses, manage budgets, calculate SIPs/EMIs, and monitor investment portfolios. Built for financial empowerment, it offers intuitive tools and insights to support smarter money decisions, especially for women.",
-      tech: ["React.js", "Bootstrap"],
+      tech: ["React.js", "Bootstrap", "Node.js", "MongoDB", "Express.js"],
       github: "https://github.com/Nandanikirtani/Wallify",
       demo: "https://nandanikirtani.github.io/Wallify/",
     },
@@ -26,74 +21,80 @@ export default function Projects() {
       github: "https://github.com/Jashank06/Travelling-Project",
       demo: "",
     },
+    {
+      name: "Edutainment",
+      image: edutainment,
+      desc: "Edutainment is an interactive learning platform that blends education with entertainment, featuring courses, podcasts, and campus life insights to make learning engaging and fun.",
+      tech: ["React.js", "Bootstrap", "Node.js", "MongoDB", "Express.js"],
+      github: "https://github.com/Nandanikirtani/Edutainment.git",
+      demo: "https://nandanikirtani.github.io/Edutainment/",
+    },
   ];
+
   return (
-    <div
-      id="projects"
-      className="min-h-screen flex flex-col items-center justify-center "
-    >
+    <div id="projects" className="min-h-screen flex flex-col items-center py-16 bg-gradient-to-b ">
+      {/* Heading */}
       <motion.h1
-        className="md:text-6xl text-4xl font-bold text-center mb-10 z-20"
-        initial={{ opacity: 0, y: 200 }}
+        className="md:text-6xl text-5xl font-extrabold text-center mb-14 bg-clip-text text-white "
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
       >
-        Projects
+        My Projects
       </motion.h1>
 
-      <div className="flex flex-wrap gap-6 justify-center">
+      {/* Project Cards */}
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 px-6">
         {project.map((p, index) => (
-          <div
+          <motion.div
             key={index}
-            className="flip-card relative w-80 h-80 cursor-pointer [perspective:1000px]"
+            whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="bg-white/10 backdrop-blur-lg shadow-xl rounded-2xl overflow-hidden border border-white/20 hover:border-pink-500 hover:shadow-pink-500/30 transition duration-300 flex flex-col"
           >
-            <div className="flip-inner transition-transform duration-700 w-full h-full relative preserve-3d">
-              {/* Front Side */}
-              <div className="absolute w-full h-full border rounded-lg shadow-xl backface-hidden flex flex-col">
-                <img className="h-48 rounded-t-lg" src={p.image} alt="" />
-                <h1 className="font-bold text-xl px-4 py-2">{p.name}</h1>
-                <div className="flex flex-wrap gap-2 px-4">
-                  {p.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="border border-gray-500 text-gray-300 text-xs px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+            {/* Image */}
+            <img src={p.image} alt={p.name} className="w-full h-48 object-cover" />
+
+            {/* Content */}
+            <div className="p-5 flex flex-col flex-grow">
+              <h2 className="text-xl font-bold text-white mb-2">{p.name}</h2>
+              <p className="text-gray-300 text-sm mb-3 line-clamp-4">{p.desc}</p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {p.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="bg-white/10 border border-gray-500 text-gray-300 text-xs px-2 py-1 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
 
-              {/* Back Side */}
-              <motion.div className="absolute w-full h-full bg-gray-900 text-white rounded-lg shadow-xl rotate-y-180 backface-hidden p-4 flex flex-col" >
-                <h3 className="text-center font-bold text-lg mb-1">Overview</h3>
-                <p className="text-sm overflow-y-auto flex-grow leading-snug m-0 p-0">
-                  {p.desc}
-                </p>
-                  <div className="flex justify-end gap-4 mt-auto px-4 pb-4">
+              {/* Buttons */}
+              <div className="mt-auto flex gap-3">
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-gradient-to-r from-pink-500 to-red-500 hover:opacity-90 text-white text-sm px-3 py-2 rounded-lg transition"
+                >
+                  GitHub
+                </a>
+                {p.demo && (
                   <a
-                    href={p.github}
+                    href={p.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded"
+                    className="flex-1 text-center bg-gradient-to-r from-green-500 to-emerald-600 hover:opacity-90 text-white text-sm px-3 py-2 rounded-lg transition"
                   >
-                    GitHub
+                    Live
                   </a>
-                  {p.demo && (
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-1 rounded"
-                    >
-                      Live
-                    </a>
-                  )}
-                </div>
-              </motion.div>
+                )}
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

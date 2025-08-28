@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="min-h-screen flex flex-col items-center justify-center">
       <motion.h1
-        className="md:text-6xl text-4xl h-16 font-bold text-center"
+        className="md:text-6xl text-5xl h-16 font-bold text-center"
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: [200, 0] }}
         transition={{

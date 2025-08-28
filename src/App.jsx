@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="text-white min-h-screen">
+    <div className="text-white  min-h-screen">
       <Navbar />
       <div className="p-6">
         <div className="pt-5">

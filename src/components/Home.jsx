@@ -7,7 +7,7 @@ export default function Home() {
       <div className="h-full place-content-center flex flex-col md:flex-row ">
         <div className=" md:text-left text-center p-8 justify-center">
           <h1 className="md:text-4xl md:mt-5 text-2xl">Hello I'm</h1>
-          <h1 className="md:text-6xl text-4xl font-bold text-[#00FFE6]  whitespace-nowrap">
+          <h1 className="md:text-6xl text-5xl font-bold text-[#00FFE6]  whitespace-nowrap">
             Nandani Kirtani
           </h1>
           <motion.h1
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
         <div className=" md:w-lg md:mt-16 ">
           <img
-            className="md:w-xl w-sm rounded-lg mx-auto mb-6"
+            className="md:w-xl w-lg rounded-lg mx-auto mb-6"
             src={home}
             alt=""
           />

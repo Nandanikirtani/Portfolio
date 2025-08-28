@@ -68,7 +68,7 @@ export default function Skills() {
     >
       {/* Heading */}
       <motion.h1
-        className="md:text-6xl text-4xl font-bold text-center md:mb-10 z-20"
+        className="md:text-6xl text-5xl font-bold text-center md:mb-10 z-20"
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -116,7 +116,7 @@ export default function Skills() {
           </motion.div>
         </div>
         <div className="flex flex-col order-1 md:order-2 mx-auto">
-          <div className="flex flex-row flex-nowrap gap-2 z-50 justify-center translate-y-20 mb-0">
+          <div className="flex flex-row flex-nowrap gap-2 justify-center translate-y-20 mb-0">
             {skillIcons.map((s, index) => (
               <img
                 className="h-10 w-10 bg-white gap-2 rounded-full"
@@ -125,7 +125,7 @@ export default function Skills() {
               />
             ))}
           </div>
-          <div className="flex flex-row flex-nowrap gap-2 z-50 justify-center translate-y-25 mb-0">
+          <div className="flex flex-row flex-nowrap gap-2 justify-center translate-y-25 mb-0">
             {skill.map((s, index) => (
               <img
                 className="h-10 w-10 bg-white gap-2 rounded-full"
@@ -196,7 +196,9 @@ export default function Skills() {
             </h3>
             <ul>
               <li>Node.js</li>
+              <li>Express.js</li>
               <li>MongoDB</li>
+              <li>MySQL</li>
             </ul>
           </motion.div>
           <motion.div
@@ -213,6 +215,7 @@ export default function Skills() {
             <ul>
               <li>Git</li>
               <li>GitHub</li>
+              <li>PostMan</li>
             </ul>
           </motion.div>
           <motion.div
