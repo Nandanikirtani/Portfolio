@@ -7,26 +7,26 @@ export default function Experience() {
       role: "Software Engineering Intern",
       company: "Hitachi Systems Pvt. Ltd.",
       time: "August 2025 – Present",
-      desc: "Learning and exploring new technologies in software development, contributing to real-world projects, and enhancing coding skills in a professional environment.",
+      desc: "Built and optimized real-world software modules used in enterprise projects. Improved efficiency by streamlining code and ensuring scalability while working in a professional team environment.",
     },
     {
       role: "Web Development Intern",
       company: "Manav Rachna University",
       time: "June 2025 – Ongoing",
-      desc: "Developing an e-learning platform for university internship programs, gaining hands-on experience in scalable solutions..",
+      desc: "Developed a scalable e-learning platform for 1,000+ students. Designed intuitive front-end interfaces and integrated secure backend APIs, delivering results within strict timelines.",
     },
     {
       role: "Open Source Contributor",
       company: "GitHub",
       time: "2024 – Present",
-      desc: "Actively contributing to open source projects with 50+ meaningful pull requests merged, improving code quality, features, and documentation across repositories.",
+      desc: "Contributed 50+ enhancements to open-source projects, improving code quality, features, and documentation. Collaborated with global developers to deliver production-ready solutions.",
     },
   ];
 
   return (
     <section
       id="experience"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-16  text-white"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-16 text-white"
     >
       {/* Heading */}
       <motion.h1
@@ -36,7 +36,7 @@ export default function Experience() {
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        Experience
+        Work Experience & Contributions
       </motion.h1>
 
       {/* Timeline Container */}

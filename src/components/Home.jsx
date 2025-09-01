@@ -1,68 +1,73 @@
 import React from "react";
 import { motion } from "framer-motion";
 import home from "../assets/home.gif";
+import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
-    <div id="home" className="pt-16 ">
-      <div className="h-full place-content-center flex flex-col md:flex-row ">
-        <div className=" md:text-left text-center p-8 justify-center">
-          <h1 className="md:text-4xl md:mt-5 text-2xl">Hello I'm</h1>
-          <h1 className="md:text-6xl text-5xl font-bold text-[#00FFE6]  whitespace-nowrap">
-            Nandani Kirtani
-          </h1>
-          <motion.h1
-            className="text-red-500 md:text-lg mt-2  whitespace-nowrap"
-            initial={{ y: -200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            EAT() - Sleep() - Code() - Repeat()
-          </motion.h1>
-          <motion.h1
-            className="mt-10 text-3xl  whitespace-nowrap"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 3, ease: "easeInOut" }}
-          >
-            FullStack Developer
-          </motion.h1>
-          <h3 className="mt-4 md:w-xl md:text-lg">
-            Crafting seamless web experiences from front-end finesse to back-end
-            power.I create seamless digital experiences that blend thoughtful
-            design with strong logic. Focused on usability, performance, and
-            scalability from front to back.
-          </h3>
+    <div id="home" className="md:pt-32 pt-16">
+      <div className="h-full justify-center items-center flex flex-col md:flex-row gap-6 md:gap-32 ">
+        <div className="text-center md:text-left mt-8 md:mt-0">
+        <motion.h2
+          className="text-xl sm:text-2xl md:text-3xl text-gray-300"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          👋 Hello, I'm
+        </motion.h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-4 md:mt-12 mt-6">
-            <motion.a
-              href="https://github.com/Nandanikirtani"
-              target="_blank"
-              initial={{ y: -300 }}
-              animate={{ y: [-300, 0, -30, 0, -10, 0], opacity: 1 }}
-              transition={{
-                duration: 1,
-                ease: "easeOut",
-                times: [0, 0.3, 0.5, 0.7, 0.85, 1],
-              }}
-              className="bg-red-500 py-3 px-8 rounded-lg text-white text-center w-full md:w-auto"
-            >
-              View Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              initial={{ y: -300 }}
-              animate={{ y: [-300, 0, -30, 0, -10, 0], opacity: 1 }}
-              transition={{
-                duration: 1.4,
-                ease: "easeOut",
-                times: [0, 0.3, 0.5, 0.7, 0.85, 1],
-              }}
-              className="border border-red-500 py-3 px-8 rounded-lg text-center w-full md:w-auto"
-            >
-              Contact Me
-            </motion.a>
-          </div>
+        <motion.h1
+          className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-[#00FFE6] mt-2 leading-tight"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Nandani Kirtani
+        </motion.h1>
+
+        <TypeAnimation
+          sequence={[
+            "Full-Stack Web Developer 💻",
+            2000,
+            "React & Node.js Specialist ⚡",
+            2000,
+            "Building Scalable Web Apps 🚀",
+            2000,
+          ]}
+          wrapper="h3"
+          className="text-red-400 text-lg sm:text-xl md:text-2xl mt-3 font-semibold"
+          repeat={Infinity}
+        />
+
+        <p className="mt-6 text-gray-300 leading-relaxed max-w-lg mx-auto md:mx-0 text-lg sm:text-base md:text-lg">
+          I help startups and businesses create{" "}
+          <span className="text-red-400">
+            modern, high-performing websites
+          </span>{" "}
+          that convert visitors into clients. From pixel-perfect frontends to
+          powerful backends, I deliver solutions that are{" "}
+          <span className="text-red-400">fast, scalable, and user-friendly</span>.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+          <motion.a
+            href="https://github.com/Nandanikirtani"
+            target="_blank"
+            className="bg-red-500 hover:bg-red-600 transition-all duration-300 py-3 px-6 md:px-8 rounded-2xl text-white font-semibold shadow-lg text-sm sm:text-base"
+            whileHover={{ scale: 1.05 }}
+          >
+            🚀 View My Work
+          </motion.a>
+          <motion.a
+            href="#contact"
+            className="border-2 border-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 py-3 px-6 md:px-8 rounded-2xl font-semibold shadow-lg text-sm sm:text-base"
+            whileHover={{ scale: 1.05 }}
+          >
+            📩 Hire Me
+          </motion.a>
         </div>
+      </div>
         <div className=" md:w-lg md:mt-16 ">
           <img
             className="md:w-xl w-lg rounded-lg mx-auto mb-6"

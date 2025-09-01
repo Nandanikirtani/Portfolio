@@ -64,7 +64,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen flex flex-col items-center justify-center "
+      className="min-h-screen py-16 flex flex-col items-center justify-center "
     >
       {/* Heading */}
       <motion.h1
@@ -109,6 +109,8 @@ export default function Skills() {
               <li>CSS</li>
               <li>JavaScript</li>
               <li>React.js</li>
+              <li>Next.js</li>
+              <li>Typescript</li>
               <li>Bootstrap</li>
               <li>Tailwind CSS</li>
               <li>Framer Motion</li>
